@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background: url("sixteen-miles-out-SvbDNnbipj0-unsplash.jpg");
+    background-size: 105rem 60rem;
+    background-repeat: no-repeat;
+       }
+    

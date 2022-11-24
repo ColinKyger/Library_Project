@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library Project</title>
+    <link rel="stylesheet" href="./tailwind/output.css">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <main
@@ -15,9 +17,28 @@
       "
     >
       <div>
-        <h1>Library Project</h1>
+        <h1 class="text-align: center text-2xl 	font-style: underline italic" >Library Project</h1>
         <div id="library">
           <!-- Add table here -->
+          <form action="" id="newBookForm">
+            <table style="min-width: 680px; margin: 2rem">
+              <tr>
+                <td>
+                  <label for="title">Title</label><br />
+                  <input class="shadow appearance-none border rounded w-6/12 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" id="title" name="title" required/>
+                </td>
+                <td>
+                  <label for="author">Author</label><br />
+                  <input class="shadow appearance-none border rounded w-6/12 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" id="author" name="author" required/>
+                </td>
+                <td>
+                  <label for="isRead">Read</label><br />
+                  <input class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" id="isRead" name="isRead" />
+                </td>
+              </tr>
+            </table>
+            <button class="bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center active:shadow-lg transition duration-150 ease-in-out " type="submit">Add Book</button>
+          </form>
           <table id="table" style="min-width: 680px; margin: 2rem">
             <thead>
               <tr>
@@ -26,12 +47,13 @@
                 <th>Read</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody id="bookTable">
               <tr>
                 <td>Name of the Wind</td>
                 <td>Patrick Rothfuss</td>
                 <td>
                   <input
+                  
                     type="checkbox"
                     name="read"
                     id="readLibraryCheckbox"
@@ -43,6 +65,7 @@
             </tbody>
           </table>
         </div>
+      </div>
     </main>
 
     <script src="app.js"></script>
